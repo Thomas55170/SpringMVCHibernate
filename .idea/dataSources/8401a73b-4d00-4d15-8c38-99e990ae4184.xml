@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - GestBanque2@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="GestBanque2">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="bookan"/>
+    <schema id="3" name="bookan_old"/>
+    <schema id="4" name="information_schema"/>
+    <schema id="5" name="mongosql"/>
+    <schema id="6" name="myblog"/>
+    <schema id="7" name="myblog2"/>
+    <schema id="8" name="mysql"/>
+    <schema id="9" name="performance_schema"/>
+    <schema id="10" name="test"/>
+    <schema id="11" name="treefamily"/>
+    <schema id="12" name="tripalac_sensademo"/>
+    <table id="13" parent="1" name="clients"/>
+    <column id="14" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="15" parent="13" name="nom">
+      <data-type>char(25)|0</data-type>
+    </column>
+    <column id="16" parent="13" name="prenom">
+      <data-type>char(25)|0</data-type>
+    </column>
+    <column id="17" parent="13" name="adresse">
+      <data-type>char(50)|0</data-type>
+    </column>
+    <key id="18" parent="13" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
