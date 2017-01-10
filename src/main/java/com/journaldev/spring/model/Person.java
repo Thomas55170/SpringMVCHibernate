@@ -1,11 +1,8 @@
 package com.journaldev.spring.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Entity bean with JPA annotations
@@ -25,6 +22,9 @@ public class Person {
 	private String name;
 	
 	private String country;
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	private ArrayList<StrongBox> strongBoxList = new ArrayList<StrongBox>();
 
 	public int getId() {
 		return id;
@@ -48,6 +48,10 @@ public class Person {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public ArrayList<StrongBox> getStrongBoxList() {
+		return strongBoxList;
 	}
 	
 	@Override
