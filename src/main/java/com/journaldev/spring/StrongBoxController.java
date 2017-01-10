@@ -1,7 +1,5 @@
 package com.journaldev.spring;
 
-import com.journaldev.spring.model.StrongBox;
-import com.journaldev.spring.service.StrongBoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -10,6 +8,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+
+import com.journaldev.spring.model.StrongBox;
+import com.journaldev.spring.service.StrongBoxService;
 
 /**
  * Created by pcthomas on 10/01/2017.
@@ -48,14 +50,14 @@ public class StrongBoxController {
 
     }
 
-    @RequestMapping("/remove/{id}")
+    @RequestMapping("/strongboxremove/{id}")
     public String removeStrongBox(@PathVariable("id") int id){
 
         this.strongBoxService.removeStrongBox(id);
         return "redirect:/strongbox";
     }
 
-    @RequestMapping("/edit/{id}")
+    @RequestMapping("/strongboxedit/{id}")
     public String editStrongBox(@PathVariable("id") int id, Model model){
         model.addAttribute("strongbox", this.strongBoxService.getStrongBoxById(id));
         model.addAttribute("listPersons", this.strongBoxService.listStrongBox());

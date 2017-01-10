@@ -29,7 +29,7 @@ public class StrongBox {
     private int frais;
 
     public StrongBox(){}
-    
+
     public StrongBox(String aLocalisation, Integer aFrais){
         this.localisation = aLocalisation;
         this.frais = aFrais;

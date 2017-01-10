@@ -23,14 +23,14 @@ public class Person {
 	
 	private String country;
 
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	private ArrayList<StrongBox> strongBoxList = new ArrayList<StrongBox>();
+	//@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	//private ArrayList<StrongBox> strongBoxList = new ArrayList<StrongBox>();
 
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(int id)	 {
 		this.id = id;
 	}
 
@@ -50,9 +50,9 @@ public class Person {
 		this.country = country;
 	}
 
-	public ArrayList<StrongBox> getStrongBoxList() {
+	/*public ArrayList<StrongBox> getStrongBoxList() {
 		return strongBoxList;
-	}
+	}*/
 	
 	@Override
 	public String toString(){

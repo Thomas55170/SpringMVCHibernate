@@ -35,9 +35,9 @@ public class PersonController {
 	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
 	public String addPerson(@ModelAttribute("person") Person p){
 
-		StrongBox sb = new StrongBox("France",16);
+		//StrongBox sb = new StrongBox("France",16);
 
-		p.getStrongBoxList().add(sb);
+		//p.getStrongBoxList().add(sb);
 
 		if(p.getId() == 0){
 			//new person, add it
