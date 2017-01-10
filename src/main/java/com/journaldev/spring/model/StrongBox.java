@@ -26,9 +26,14 @@ public class StrongBox {
 
     private String localisation;
 
-    private Double frais;
+    private int frais;
 
     public StrongBox(){}
+    
+    public StrongBox(String aLocalisation, Integer aFrais){
+        this.localisation = aLocalisation;
+        this.frais = aFrais;
+    }
 
     public int getId() {
         return id;
@@ -46,11 +51,11 @@ public class StrongBox {
         this.localisation = localisation;
     }
 
-    public Double getFrais() {
+    public int getFrais() {
         return frais;
     }
 
-    public void setFrais(Double frais) {
+    public void setFrais(int frais) {
         this.frais = frais;
     }
 

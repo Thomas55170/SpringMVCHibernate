@@ -1,5 +1,6 @@
 package com.journaldev.spring;
 
+import com.journaldev.spring.model.StrongBox;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -33,7 +34,11 @@ public class PersonController {
 	//For add and update person both
 	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
 	public String addPerson(@ModelAttribute("person") Person p){
-		
+
+		StrongBox sb = new StrongBox("France",16);
+
+		p.getStrongBoxList().add(sb);
+
 		if(p.getId() == 0){
 			//new person, add it
 			this.personService.addPerson(p);
